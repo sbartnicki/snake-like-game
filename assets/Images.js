@@ -1,0 +1,18 @@
+export default Images = {
+  floor: require('./floor.png'),
+  floor1: require('./floor1.png'),
+  bottom: require('./bottom.png'),
+  top: require('./top.png'),
+  left: require('./left.png'),
+  right: require('./right.png'),
+  background: require('./background.png'),
+  bird1: require('./frame-1.png'),
+  bird2: require('./frame-2.png'),
+  bird3: require('./frame-3.png'),
+  bird4: require('./frame-4.png'),
+  bird5: require('./frame-5.png'),
+  bird6: require('./frame-6.png'),
+  bird7: require('./frame-7.png'),
+  bird8: require('./frame-8.png'),
+  head: require('./head.png'),
+};

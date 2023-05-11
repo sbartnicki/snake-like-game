@@ -1,11 +1,12 @@
 import { Dimensions } from 'react-native';
 
-let gridSize = 15;
-let cellSize = (Dimensions.get('window').width - 50) / gridSize; // I want 20 moves to the right
+let wallSize = 30;
+let gridSize = 10; // How many columns/steps to the right
+let cellSize = (Dimensions.get('window').width - wallSize * 2) / gridSize;
 let tallCapacity = Math.floor(
-  (Dimensions.get('window').height - 50) / cellSize
+  (Dimensions.get('window').height - wallSize * 2) / cellSize
 );
-let remainder = (Dimensions.get('window').height - 50) % cellSize;
+let remainder = (Dimensions.get('window').height - wallSize * 2) % cellSize;
 
 export default Constants = {
   MAX_WIDTH: Dimensions.get('window').width,
@@ -13,5 +14,6 @@ export default Constants = {
   CELL_SIZE: cellSize,
   GRID_WIDE: gridSize,
   GRID_TALL: tallCapacity,
-  TOP_BOUNDRY: 25 + remainder,
+  TOP_BOUNDRY: wallSize + remainder,
+  WALL_SIZE: wallSize,
 };
